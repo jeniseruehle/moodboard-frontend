@@ -1,0 +1,6 @@
+class Mood {
+
+
+}
+
+Mood.all = []

@@ -9,6 +9,30 @@ class Adapter {
         .then(resp => resp.json())
     }
 
+    postMood(name, desc, image, board_id) {
+        const moodInput = {name, desc, image, board_id}
+        return fetch(`${this.moodsURL}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(moodInput)
+        })
+        .then(resp => resp.json())
+        .then(mood => {
+            const moodData = mood.data
+            let newMood = new mood(moodData, moodData.attributes)
+            document.querySelector('#mood-container').innerHTML += newMood.renderMood()
+        })
+    }
+
+    deleteMood(e) {
+        fetch(`${this.moodsURL}/${e.target.dataset.id}`, {
+            method: "DELETE"
+        })
+    }
+
     fetchBoards() {
         return fetch(`${this.boardsURL}`)
         .then(resp => resp.json())
