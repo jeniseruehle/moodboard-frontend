@@ -23,7 +23,7 @@ class Adapter {
         .then(mood => {
             const moodData = mood.data
             let newMood = new mood(moodData, moodData.attributes)
-            document.querySelector('#mood-container').innerHTML += newMood.renderMood()
+            document.querySelector('#mood-container').innerHTML += newMood.renderMoodCard()
         })
     }
 

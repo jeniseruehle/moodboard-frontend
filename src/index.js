@@ -1,6 +1,11 @@
 const adapter = new Adapter()
 
 document.addEventListener('DOMContentLoaded', () => {
+    Mood.renderMoods();
+    Mood.createMoodForm();
+    Board.renderBoards();
+    Board.filterBoards();
+    Board.renderFilters();
 
 })
 

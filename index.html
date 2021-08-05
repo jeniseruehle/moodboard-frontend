@@ -14,7 +14,47 @@
     <link rel="stylesheet" href="styles.css">
   
 </head>
+
   <body>
-   Sample text - replace me! 
+    <header>
+      <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+        <a href="#" class="logo">Moodboards 🎨</a>
+        <!-- <ul class="main-nav" id="js-menu">
+          <li>
+            <a href="#" class="nav-links">Home</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Boards</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Moods</a>
+          </li>
+        </ul> -->
+      </nav></header>
+
+      <!-- <main> -->
+        <div class="title-container">
+          <br><h1>Create a Moodboard</h1>
+          <div class="form-container">
+            <form id="create-mood-form" style="">
+              <input id="mood-name" type="text", name="name" value="" placeholder="Enter your mood name" class="input-text">
+              <textarea id="mood-desc" type="text", name="desc" value="" placeholder="Enter a description" class="input-text"></textarea>
+              <input id="mood-image" type="text", name="image" value="" placeholder="Enter image url" class="input-text">
+
+              <p>Choose a Board:</p>
+              <select id="boards" name="boards"></select>
+              <input id="create-button" type="submit" name="submit" value="Create Mood" class="submit">
+
+            </form>
+          </div>
+        </div>
+
+
+      <!-- </main> -->
+    
+   
   </body>
 </html>
