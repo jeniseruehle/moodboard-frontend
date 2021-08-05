@@ -1,14 +1,13 @@
-const adapter = new Adapter()
+const apiAdapter = new ApiAdapter()
 
 document.addEventListener('DOMContentLoaded', () => {
-    Mood.renderMoods();
-    Mood.createMoodForm();
-    Board.renderBoards();
-    Board.filterBoards();
-    Board.renderFilters();
+    Mood.renderMoods()
+    Mood.createMoodForm()
+    Board.renderBoards()
+    Board.filterBoards()
+    Board.renderFilters()
 
 })
-
 // console.log("testing...")
 
 // const BACKEND_URL = 'http://localhost:3000';

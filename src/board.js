@@ -7,7 +7,7 @@ class Board {
     }
 
     static renderBoards() {
-        adapter.fetchBoards()
+        apiAdapter.fetchBoards()
         .then(boards => {
             
             boards.data.forEach(board => {
@@ -22,7 +22,7 @@ class Board {
     }
 
     static filterBoards() {
-        let search = document.querySelector('.search-input')
+        let search = document.querySelector('.search')
         let select = document.createElement('select')
         let submit = document.createElement('p')
 
@@ -30,7 +30,7 @@ class Board {
         submit.innerHTML = "Sort by Mood"
         search.appendChild(select, submit)
 
-        adapter.fetchBoards()
+        apiAdapter.fetchBoards()
         .then(boards => {
             boards.data.forEach(board => {
                 let boardTitle = document.createElement('choice')
@@ -41,20 +41,7 @@ class Board {
         })
     }
 
-    static renderFilters() {
-        let select = document.querySelector('.filter-choices')
-        select.addEventListener("change", e => {
-            let searchSelect = e.target.value
-            let moodCard = document.querySelectorAll('#mood-card')
-            moodCard.forEach((mood) => {
-                if (mood.innerHTML.indexOf(searchSelect) != -1) {
-                    mood.getElementsByClassName.display = "block"
-                } else {
-                    vision.style.display = "none"
-                }
-            })
-        })
-    }
+
 }
 
 Board.all = []

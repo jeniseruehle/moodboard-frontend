@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Moodboards 🎨</title>
-    
-    <!-- scripts -->
-    <script src="src/index.js" charset="UTF-8"></script>
-    <script src="src/adapter.js" charset="UTF-8"></script>
-    <script src="src/mood.js" charset="UTF-8"></script>
-    <script src="src/board.js" charset="UTF-8"></script>
+
+       <!-- scripts -->
+       <script type="text/javascript" src="src/adapter.js" charset="UTF-8"></script>
+       <script type="text/javascript" src="src/index.js" charset="UTF-8"></script>
+       <script type="text/javascript" src="src/mood.js" charset="UTF-8"></script>
+       <script type="text/javascript" src="src/board.js" charset="UTF-8"></script>
 
     <!-- styles -->
     <link rel="stylesheet" href="styles.css">
@@ -39,7 +39,7 @@
         <div class="title-container">
           <br><h1>Create a Moodboard</h1>
           <div class="form-container">
-            <form id="create-mood-form" style="">
+            <form id="create-mood-form">
               <input id="mood-name" type="text", name="name" value="" placeholder="Enter your mood name" class="input-text">
               <textarea id="mood-desc" type="text", name="desc" value="" placeholder="Enter a description" class="input-text"></textarea>
               <input id="mood-image" type="text", name="image" value="" placeholder="Enter image url" class="input-text">
@@ -52,9 +52,15 @@
           </div>
         </div>
 
+        <div class="search">
+          <h3>Sort Moods By Board</h3>
+          <select id="filter-choices" name="filter-choices"></select>
+        </div>
+
+        <div id="mood-container"></div>
+
 
       <!-- </main> -->
     
-   
   </body>
 </html>

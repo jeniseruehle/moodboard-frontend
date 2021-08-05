@@ -11,7 +11,7 @@ class Mood {
     }
 
     static renderMoods() {
-        adapter.fetchMoods()
+        apiAdapter.fetchMoods()
         .then(moods => {
             moods.data.forEach(mood => {
             let newMood = new Mood(mood, mood.attributes)
@@ -22,8 +22,13 @@ class Mood {
 
     renderMoodCard() {
         return `
-        
-        `
+        <div data-id=${this.id}>
+            <h3>Name: ${this.name}></h3>
+            <p>Description: ${this.desc}</p>
+            <img src=${this.image}>
+            <p>Board: ${this.board.title}</p>
+        </div>
+        `;
     }
 
     static createMoodForm(e) {
@@ -34,7 +39,7 @@ class Mood {
             const moodDesc = document.querySelector('#mood-desc').value
             const moodImage = document.querySelector('#mood-image').value
             const boardID = parseInt(document.querySelector('#boards').value)
-            adapter.postMood(moodName, moodDesc, moodImage, boardID)
+            apiAdapter.postMood(moodName, moodDesc, moodImage, boardID)
             moodForm.requestFullscreen()
         })
     }

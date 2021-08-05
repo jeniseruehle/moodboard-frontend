@@ -1,4 +1,5 @@
-class Adapter {
+class ApiAdapter {
+
     constructor() {
         this.moodsURL = `http://localhost:3000/moods`
         this.boardsURL = `http://localhost:3000/boards`
