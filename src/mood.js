@@ -23,10 +23,10 @@ class Mood {
     renderMoodCard() {
         return `
         <div data-id=${this.id}>
-            <h3>Name: ${this.name}></h3>
-            <p>Description: ${this.desc}</p>
-            <img src=${this.image}>
-            <p>Board: ${this.board.title}</p>
+            <h3>${this.name}</h3>
+            <img src=${this.image} width="100%" height="80%">
+            <p>${this.desc}</p>
+            <p>${this.board.title}</p>
         </div>
         `;
     }
@@ -40,7 +40,7 @@ class Mood {
             const moodImage = document.querySelector('#mood-image').value
             const boardID = parseInt(document.querySelector('#boards').value)
             apiAdapter.postMood(moodName, moodDesc, moodImage, boardID)
-            moodForm.requestFullscreen()
+            e.target.reset()
         })
     }
 }

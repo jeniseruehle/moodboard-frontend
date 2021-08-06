@@ -137,13 +137,15 @@ input, textarea, select, form p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    row-gap: 40px;
+    row-gap: 20px;
 }
 
 [data-id] {
-    padding: 8px;
-    color: rgb(10, 10, 10);
-    background-color: rgb(180, 180, 180);
+    padding: 5px;
+    color: #2376ae;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgray;
     height: 100%;
+    width: auto;
 }
   

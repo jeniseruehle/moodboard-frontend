@@ -38,7 +38,7 @@
       <!-- <main> -->
         <div class="title-container">
           <br><h1>Create a Moodboard</h1>
-          <div class="form-container">
+          <div class="form-container" data-action="create">
             <form id="create-mood-form">
               <input id="mood-name" type="text", name="name" value="" placeholder="Enter your mood name" class="input-text">
               <textarea id="mood-desc" type="text", name="desc" value="" placeholder="Enter a description" class="input-text"></textarea>
@@ -53,8 +53,8 @@
         </div>
 
         <div class="search">
-          <h3>Sort Moods By Board</h3>
-          <select id="filter-choices" name="filter-choices"></select>
+          <h3>Sort By Board</h3>
+          <!-- <select id="filter-choices" name="filter-choices"></select> -->
         </div>
 
         <div id="mood-container"></div>

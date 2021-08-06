@@ -23,9 +23,10 @@ class ApiAdapter {
         .then(resp => resp.json())
         .then(mood => {
             const moodData = mood.data
-            let newMood = new mood(moodData, moodData.attributes)
+            let newMood = new Mood(moodData, moodData.attributes)
             document.querySelector('#mood-container').innerHTML += newMood.renderMoodCard()
         })
+        .catch(error => console.log(error))
     }
 
     deleteMood(e) {
