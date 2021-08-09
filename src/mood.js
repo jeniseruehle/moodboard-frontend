@@ -26,7 +26,7 @@ class Mood {
             <h3>${this.name}</h3>
             <img src=${this.image} width="100%" height="80%">
             <p>${this.desc}</p>
-            <p>${this.board.title}</p>
+            <p>${this.board.title} <button data-id=${this.id} type="button" class="delete">Delete Mood?</button></p>
         </div>
         `;
     }
@@ -41,6 +41,27 @@ class Mood {
             const boardID = parseInt(document.querySelector('#boards').value)
             apiAdapter.postMood(moodName, moodDesc, moodImage, boardID)
             e.target.reset()
+        })
+    }
+
+    static getParentNode(element, level=1) {
+        while(level-- > 0) {
+            element = element.parentNode;
+            if(!element) {
+                return null;
+            }
+        }
+        return element;
+    }
+
+    static removeMood() {
+        const moodContainer = document.querySelector('#mood-container')
+        moodContainer.addEventListener('click', e => {
+            if (e.target.className === "delete") {
+                apiAdapter.deleteMood(e)
+                this.getParentNode(e.target, 6).remove()
+                e.target.reset()
+            }
         })
     }
 }

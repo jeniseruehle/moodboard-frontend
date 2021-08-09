@@ -31,7 +31,10 @@ class ApiAdapter {
 
     deleteMood(e) {
         fetch(`${this.moodsURL}/${e.target.dataset.id}`, {
-            method: "DELETE"
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
         })
     }
 

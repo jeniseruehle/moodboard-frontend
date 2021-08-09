@@ -3,6 +3,7 @@ const apiAdapter = new ApiAdapter()
 document.addEventListener('DOMContentLoaded', () => {
     Mood.renderMoods()
     Mood.createMoodForm()
+    Mood.removeMood()
     Board.renderBoards()
     Board.filterBoards()
     Board.renderFilters()
