@@ -41,13 +41,6 @@ body {
     align-items: center;
 }
   
-.main-nav {
-    display: flex;
-    margin-right: 30px;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-  
 .logo {
     margin-top: 0;
 }
@@ -126,4 +119,5 @@ input, textarea, select, form p{
     width: auto;
     height: 10%;
     float: right;
+}
 }

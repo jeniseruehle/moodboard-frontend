@@ -59,8 +59,7 @@ class Mood {
         moodContainer.addEventListener('click', e => {
             if (e.target.className === "delete") {
                 apiAdapter.deleteMood(e)
-                this.getParentNode(e.target, 6).remove()
-                e.target.reset()
+                this.getParentNode(e.target.dataset.id).remove()
             }
         })
     }

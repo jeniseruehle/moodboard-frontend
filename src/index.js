@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     Mood.createMoodForm()
     Mood.removeMood()
     Board.renderBoards()
-    Board.filterBoards()
-    Board.renderFilters()
-
 })
 // console.log("testing...")
 
