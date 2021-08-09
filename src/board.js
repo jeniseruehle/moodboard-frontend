@@ -18,6 +18,7 @@ class Board {
             dropDown.append(options)
             })
         })
+        .catch(error => console.log(error))
     }
 }
 

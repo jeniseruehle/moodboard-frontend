@@ -44,22 +44,12 @@ class Mood {
         })
     }
 
-    static getParentNode(element, level=1) {
-        while(level-- > 0) {
-            element = element.parentNode;
-            if(!element) {
-                return null;
-            }
-        }
-        return element;
-    }
-
     static removeMood() {
         const moodContainer = document.querySelector('#mood-container')
         moodContainer.addEventListener('click', e => {
             if (e.target.className === "delete") {
                 apiAdapter.deleteMood(e)
-                this.getParentNode(e.target.dataset.id).remove()
+                this.parentElement(e.target.dataset.id).remove()
             }
         })
     }
